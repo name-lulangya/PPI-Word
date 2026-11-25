@@ -1,0 +1,37 @@
+{
+  "task": "gold",
+  "temperature": 0.05,
+  "dropout": 0.2,
+  "prediction_windows": "no_overlap",
+  "training": {
+    "seed": 42,
+    "accumulation": 1,
+    "weight_decay": 0.01,
+    "pos_weight": 1.0,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "warmup_epochs": 0,
+    "warmup_start_factor": 0.1,
+    "selection_group": null,
+    "world_size": 4,
+    "batch_size": 32,
+    "lr": 0.0001,
+    "epochs": 100,
+    "patience": 10,
+    "workers": 4,
+    "train_precision": "fp32",
+    "eval_precision": "fp32",
+    "validations_per_epoch": 1,
+    "selection_metric": "auroc"
+  },
+  "embedding": {
+    "model": "esm2_t33_650M_UR50D",
+    "layer": 33,
+    "precision": "fp32",
+    "residue_storage_dtype": "float16",
+    "storage_dtype": "float16"
+  }
+}

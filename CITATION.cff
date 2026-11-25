@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this software when using it in your research."
+title: "PPI-Word"
+type: software
+version: 0.1.0
+repository-code: "https://github.com/name-lulangya/PPI-Word"
+date-released: 2026-11-25
+authors:
+  - family-names: Lu
+    given-names: Langya
+  - family-names: Tian
+    given-names: Boxue

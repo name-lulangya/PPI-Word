@@ -1,0 +1,37 @@
+{
+  "task": "cross_species",
+  "temperature": 0.5,
+  "dropout": 0.3,
+  "prediction_windows": "no_overlap",
+  "training": {
+    "seed": 42,
+    "accumulation": 2,
+    "weight_decay": 0.05,
+    "pos_weight": 10.0,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "warmup_epochs": 3,
+    "warmup_start_factor": 0.1,
+    "selection_group": null,
+    "world_size": 8,
+    "batch_size": 32,
+    "lr": 0.001,
+    "epochs": 50,
+    "patience": 5,
+    "workers": 2,
+    "train_precision": "fp16",
+    "eval_precision": "fp32",
+    "validations_per_epoch": 1,
+    "selection_metric": "auprc"
+  },
+  "embedding": {
+    "model": "esm2_t33_650M_UR50D",
+    "layer": 33,
+    "precision": "fp32",
+    "residue_storage_dtype": "float16",
+    "storage_dtype": "float16"
+  }
+}

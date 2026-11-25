@@ -1,0 +1,10 @@
+{
+  "threshold": 0.04541015625,
+  "lower_bound": 64,
+  "cap": 512,
+  "target_tail_probability": 1e-07,
+  "selection": "min(pair_count,512,max(64,count(score>=threshold)))",
+  "tie_order": "ascending start1 then start2",
+  "scoring_precision": "bf16",
+  "exclude_X": "after positional selection"
+}

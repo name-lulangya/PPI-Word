@@ -1,0 +1,19 @@
+{
+  "gold": {
+    "score": "probability",
+    "threshold": 0.5,
+    "source": "fixed"
+  },
+  "string_model": {
+    "score": "logit",
+    "threshold": -0.0852303504943847,
+    "source": "validation TwoOut Youden"
+  },
+  "string_rules": {
+    "score": "rule_score",
+    "threshold": 0.0810150398400803,
+    "source": "validation TwoOut Youden"
+  },
+  "prediction_operator": ">=",
+  "apply_groups": "all groups; no refitting on test"
+}

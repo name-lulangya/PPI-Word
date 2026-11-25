@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ppi-word"
+version = "0.1.0"
+description = "Fragment scoring and reusable sequence rules for PPI prediction"
+requires-python = ">=3.10"
+authors = [{name = "Langya Lu"}, {name = "Boxue Tian"}]
+license = {file = "LICENSE"}
+dependencies = ["numpy", "pandas", "pyarrow", "duckdb", "torch", "tqdm"]
+
+[project.urls]
+Repository = "https://github.com/name-lulangya/PPI-Word"
+
+[project.optional-dependencies]
+esm = ["fair-esm"]
+metrics = ["scikit-learn"]
+
+[project.scripts]
+ppi-word = "ppi_word.cli.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

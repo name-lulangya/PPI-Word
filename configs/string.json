@@ -1,0 +1,37 @@
+{
+  "task": "string",
+  "temperature": 0.05,
+  "dropout": 0.2,
+  "prediction_windows": "fps64",
+  "training": {
+    "seed": 42,
+    "accumulation": 1,
+    "weight_decay": 0.01,
+    "pos_weight": 1.0,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "warmup_epochs": 0,
+    "warmup_start_factor": 0.1,
+    "selection_group": "TwoOutOfTrainset",
+    "world_size": 4,
+    "batch_size": 256,
+    "lr": 0.0005,
+    "epochs": 10,
+    "patience": 20,
+    "workers": 2,
+    "train_precision": "bf16",
+    "eval_precision": "bf16",
+    "validations_per_epoch": 10,
+    "selection_metric": "auprc"
+  },
+  "embedding": {
+    "model": "esm2_t33_650M_UR50D",
+    "layer": 33,
+    "precision": "bf16",
+    "residue_storage_dtype": "float32",
+    "storage_dtype": "float16"
+  }
+}
